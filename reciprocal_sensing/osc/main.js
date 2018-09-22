@@ -1,0 +1,8 @@
+var osc = require('node-osc');
+
+var oscServer = new osc.Server(3333, '0.0.0.0');
+console.log("Listening...");
+oscServer.on("message", function (msg, rinfo) {
+      console.log("TUIO message:");
+      console.log(msg);
+});
