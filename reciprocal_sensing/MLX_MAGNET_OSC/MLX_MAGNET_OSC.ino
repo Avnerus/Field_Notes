@@ -1,19 +1,5 @@
 /*
-  MLX90393 Magnetometer Example Code
-  By: Nathan Seidle
-  SparkFun Electronics
-  Date: February 6th, 2017
-  License: This code is public domain but you buy me a beer if you use this and we meet someday (Beerware license).
-
-  Read the mag fields on three XYZ axis
-
-  Hardware Connections (Breakoutboard to Arduino):
-  3.3V = 3.3V
-  GND = GND
-  SDA = A4
-  SCL = A5
-
-  Serial.print it out at 9600 baud to serial monitor.
+  MLX90393 Magnetometer to OSC messages via Wemos D1
 */
 
 #include <Wire.h>
@@ -27,7 +13,7 @@
 MLX90393 mlx;
 MLX90393::txyz data; //Create a structure, called data, of four floats (t, x, y, and z)
 const char* ssid     = "FabLabNet";         
-const char* password = "Betonprint";     
+const char* password = "********";     
 const IPAddress outIp(192,168,0,196);
 const unsigned int outPort = 9000;
 WiFiUDP Udp;
